@@ -1,0 +1,23 @@
+@charset "utf-8";
+body,html{
+    margin: 0;
+    width: 100%;
+    background-color: red;
+}
+
+.menuframeDiv{
+    overflow: hidden;
+    position: relative;
+}
+.menudiv{
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.menuimgdiv{
+    float: left;
+    width: 500px;
+}
+.menuimgdiv img {
+    width: 100%;
+}

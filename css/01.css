@@ -18,19 +18,34 @@ body,html{
 .spDIV{
     float: left;
     display: table-cell;
+    overflow: hidden;
+    position: relative;
+}
+.spDIV a div{
+    width: 100%;
+    height: 100%;
 }
 .sp{
     width: 100%;
 }
 .spDIV img {
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.spCenter{
+.spCentercss{
     margin: 0 10px 0 10px;
+}
+.spleftcss{
+    margin: 0 5px 0 0;
+}
+.sprightcss{
+    margin: 0 0 0 5px;
 }
 
 .spbutton{
-    opacity: 0.3;
+    opacity: 0.3;/*按钮透明*/
     background: lightgray;
     cursor: pointer;
     height: 100%;
