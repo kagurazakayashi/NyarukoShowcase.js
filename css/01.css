@@ -1,0 +1,46 @@
+@charset "utf-8";
+body,html{
+    margin: 0;
+    width: 100%;
+    background-color: red;
+}
+.spfatherDIV{
+    position: relative;
+    overflow: hidden;
+}
+.scrollpicture{
+    background-color: #fff;
+    width: 100%;
+    display: table;
+    position: absolute;
+    top: 0;
+}
+.spDIV{
+    float: left;
+    display: table-cell;
+}
+.sp{
+    width: 100%;
+}
+.spDIV img {
+    width: 100%;
+}
+.spCenter{
+    margin: 0 10px 0 10px;
+}
+
+.spbutton{
+    opacity: 0.3;
+    background: lightgray;
+    cursor: pointer;
+    height: 100%;
+    width: 20px;
+    position: absolute;
+    top: 0;
+}
+.spleft{
+    left: 0;
+}
+.spright{
+    right: 0;
+}
