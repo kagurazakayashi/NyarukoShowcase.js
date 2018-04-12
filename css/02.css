@@ -6,7 +6,7 @@ body,html{
 }
 
 .menuframeDiv{
-    overflow: hidden;
+    overflow-y: hidden;
     position: relative;
 }
 .menudiv{
