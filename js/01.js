@@ -33,7 +33,7 @@ function scrollpicture(spid) {
     if(spdivlen < 3){
         spdivlen = 3;
     }
-    var spw = $('body').width();
+    var spw = $('.scrollview').width();
     if (spw <= 480) {
         spshownum = 1;
     } else if (spw <= 840) {
@@ -61,7 +61,7 @@ function scrollpicture(spid) {
             spdivlen = scrollimgs.length;
         }
 
-        sparr00.push("<div class='" + spcss + "' style='width: " + spimgw + "px;height: " + (spimgh+spith) + "px;'><div class='spimgdiv' style = 'width: " + spimgw + "px;height: " + spimgh + "px;'><a href='" + obj[2] + "'><img src='" + obj[1] + "'/></a></div><div class='scrollpicturetitle pictitle2'>" + obj[0] + "</div></div>");
+        sparr00.push("<div class='" + spcss + "' style='width: " + spimgw + "px;height: " + (spimgh+spith) + "px;'><div class='spimgdiv' style = 'width: " + spimgw + "px;height: " + spimgh + "px;'><a href='" + obj[2] + "'><img src='" + obj[1] + "'/></a></div><div class='scrolltitle'>" + obj[0] + "</div></div>");
         if (spshownum == 3){
             if (i % spshownum == 2){
                 var nowarr = sparr[spid];
@@ -167,7 +167,7 @@ function scrollpicture(spid) {
     $(".spbutton").height($('.spDIV').height());
 }
 function rewh(){
-    spw = $('body').width();
+    spw = $('.scrollview').width();
     var oldspshownum = spshownum;
     if (spw <= 480) {
         spshownum = 1;
@@ -264,10 +264,10 @@ function rewh(){
 }
 function leftbutton(spid){
     $('#' + spid + ' .spleft').removeAttr("onclick");
-    var spw = $('#' + spid + ' .scrollpicture').position().left + $('body').width();
+    var spw = $('#' + spid + ' .scrollpicture').position().left + $('.scrollview').width();
     $('#' + spid + ' .scrollpicture').animate({left: spw + "px"},500,function(){
         $('#' + spid + ' .spleft').attr("onclick","leftbutton('" + spid + "');");
-        $('.scrollpicture').css({'left': -$('body').width() + 'px'});
+        $('.scrollpicture').css({'left': -$('.scrollview').width() + 'px'});
         $('#' + spid + ' .scrollpicture').html("");
         sparr[spid].forEach(function(obj, i){
             if (scrollimgnum2[spid]){
@@ -295,7 +295,7 @@ function leftbutton(spid){
             }else if(this.height < $('.spimgdiv').height()){
                 $(this).width('auto');
                 $(this).height($('.spimgdiv').height());
-                spw = $('body').width();
+                spw = $('.scrollview').width();
                 var spimgw = (spw - spc*(spshownum-1)) / spshownum;
                 spimgh = spimgw / 16 * 9 + spith;
                 $(".spimgdiv").height(spimgh);
@@ -312,10 +312,10 @@ function disableautowidth() {
 }
 function rightbutton(spid){
     $('#' + spid + ' .spright').removeAttr("onclick");
-    var spw = $('#' + spid + ' .scrollpicture').position().left - $('body').width();
+    var spw = $('#' + spid + ' .scrollpicture').position().left - $('.scrollview').width();
     $('#' + spid + ' .scrollpicture').animate({left: spw + "px"},500,function(){
         $('#' + spid + ' .spright').attr("onclick","rightbutton('" + spid + "');");
-        $('.scrollpicture').css({'left': -$('body').width() + 'px'});
+        $('.scrollpicture').css({'left': -$('.scrollview').width() + 'px'});
         $('#' + spid + ' .scrollpicture').html("");
         sparr[spid].forEach(function(obj, i){
             if (scrollimgnum2[spid]){
@@ -342,7 +342,7 @@ function rightbutton(spid){
             }else if(this.height < $('.spimgdiv').height()){
                 $(this).width('auto');
                 $(this).height($('.spimgdiv').height());
-                spw = $('body').width();
+                spw = $('.scrollview').width();
                 var spimgw = (spw - spc*(spshownum-1)) / spshownum;
                 spimgh = spimgw / 16 * 9 + spith;
                 $(".spimgdiv").height(spimgh);
